@@ -6,10 +6,8 @@ namespace HOLA
 {
 	public class App : Application
 	{
-		
 		public App ()
 		{
-			int gitler = 0;
 			// The root page of your application
 			MainPage = new ContentPage {
 				Content = new StackLayout {
