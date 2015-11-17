@@ -14,6 +14,7 @@ namespace HOLA.UITests
 				return ConfigureApp.Android.StartApp ();
 			}
 			string itswork = "Ya bil zdes'";
+			string itswork2 = "Sdes bil dallas";
 			return ConfigureApp.iOS.StartApp ();
 		}
 	}
