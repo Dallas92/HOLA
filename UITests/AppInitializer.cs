@@ -13,7 +13,7 @@ namespace HOLA.UITests
 			if (platform == Platform.Android) {
 				return ConfigureApp.Android.StartApp ();
 			}
-
+			string itswork = "Ya bil zdes'";
 			return ConfigureApp.iOS.StartApp ();
 		}
 	}
