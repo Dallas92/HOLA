@@ -53,11 +53,10 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Views\Registration\RegisterPageView.xaml" />
-    <None Include="SISKI\EmptyTextFile.txt" />
-    <None Include="API\EmptyTextFile.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="API\" />
-    <Folder Include="SISKI\" />
+    <Folder Include="Views\Tabbar\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>
