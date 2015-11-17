@@ -15,6 +15,7 @@ namespace HOLA.UITests
 			}
 			string itswork = "Ya bil zdes'";
 			string itswork2 = "Sdes bil dallas";
+			string itswork3 = "Бугагашеньки";
 			return ConfigureApp.iOS.StartApp ();
 		}
 	}
