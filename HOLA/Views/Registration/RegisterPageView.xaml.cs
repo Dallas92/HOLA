@@ -9,7 +9,7 @@ namespace HOLA
 	{
 		public RegisterPageView ()
 		{
-			InitializeComponent ();
+			//InitializeComponent ();
 		}
 	}
 }
