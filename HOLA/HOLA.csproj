@@ -59,6 +59,63 @@
     <Compile Include="Views\Common\SelectorPage.xaml.cs">
       <DependentUpon>SelectorPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\5sections\3.Reviews\PlacesNearbyPage.xaml.cs">
+      <DependentUpon>PlacesNearbyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\5sections\3.Reviews\LeaveReviewPage.xaml.cs">
+      <DependentUpon>LeaveReviewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\5sections\4.News\NewsPage.xaml.cs">
+      <DependentUpon>NewsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\5sections\4.News\NewsDetailsPage.xaml.cs">
+      <DependentUpon>NewsDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\5sections\5.Profile\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\5sections\5.Profile\ProfileEditPage.xaml.cs">
+      <DependentUpon>ProfileEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\5sections\5.Profile\NotificationsPage.xaml.cs">
+      <DependentUpon>NotificationsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\5sections\5.Profile\FriendsPage.xaml.cs">
+      <DependentUpon>FriendsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\5sections\5.Profile\PlacesVisitedPage.xaml.cs">
+      <DependentUpon>PlacesVisitedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\5sections\5.Profile\PlacesWantToVisitPage.xaml.cs">
+      <DependentUpon>PlacesWantToVisitPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\5sections\5.Profile\PlacesFavouritesPage.xaml.cs">
+      <DependentUpon>PlacesFavouritesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\5sections\5.Profile\PlacesReviewsPage.xaml.cs">
+      <DependentUpon>PlacesReviewsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\5sections\2.Search\PlacesSearchPage.xaml.cs">
+      <DependentUpon>PlacesSearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\5sections\1.Places\PlaceDetailsPage.xaml.cs">
+      <DependentUpon>PlaceDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\5sections\1.Places\PlacesPage.xaml.cs">
+      <DependentUpon>PlacesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\5sections\1.Places\PlaceLikesPage.xaml.cs">
+      <DependentUpon>PlaceLikesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\5sections\1.Places\PlaceMenuPage.xaml.cs">
+      <DependentUpon>PlaceMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Common\PhotoGalleryPage.xaml.cs">
+      <DependentUpon>PhotoGalleryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Common\MapPage.xaml.cs">
+      <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -117,6 +174,63 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Common\SelectorPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\5sections\3.Reviews\PlacesNearbyPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\5sections\3.Reviews\LeaveReviewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\5sections\4.News\NewsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\5sections\4.News\NewsDetailsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\5sections\5.Profile\ProfilePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\5sections\5.Profile\ProfileEditPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\5sections\5.Profile\NotificationsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\5sections\5.Profile\FriendsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\5sections\5.Profile\PlacesVisitedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\5sections\5.Profile\PlacesWantToVisitPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\5sections\5.Profile\PlacesFavouritesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\5sections\5.Profile\PlacesReviewsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\5sections\2.Search\PlacesSearchPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\5sections\1.Places\PlaceDetailsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\5sections\1.Places\PlacesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\5sections\1.Places\PlaceLikesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\5sections\1.Places\PlaceMenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Common\PhotoGalleryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Common\MapPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
