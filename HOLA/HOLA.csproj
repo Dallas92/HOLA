@@ -116,9 +116,11 @@
     <Compile Include="Views\Common\MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Methods\API.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
       <HintPath>..\packages\Xamarin.Forms.2.0.0.6482\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
@@ -132,12 +134,29 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wp8+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wp8+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp.Portable">
+      <HintPath>..\packages\FubarCoder.RestSharp.Portable.2.4.5\lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\RestSharp.Portable.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="API\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Common\" />
     <Folder Include="Views\Start\" />
@@ -147,6 +166,7 @@
     <Folder Include="Views\5sections\5.Profile\" />
     <Folder Include="Views\5sections\4.News\" />
     <Folder Include="Views\5sections\3.Reviews\" />
+    <Folder Include="Methods\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\Start\StartPage.xaml">
