@@ -32,7 +32,33 @@
   <ItemGroup>
     <Compile Include="HOLA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Registration\RegisterPageView.xaml.cs" />
+    <Compile Include="Views\Start\StartPage.xaml.cs">
+      <DependentUpon>StartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Start\YourCityPage.xaml.cs">
+      <DependentUpon>YourCityPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Common\MainTabBar.xaml.cs">
+      <DependentUpon>MainTabBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Start\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Start\PasswordRestorePage.xaml.cs">
+      <DependentUpon>PasswordRestorePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Start\LoadingScreenPage.xaml.cs">
+      <DependentUpon>LoadingScreenPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Start\RegistrationPage.xaml.cs">
+      <DependentUpon>RegistrationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Start\EntryPage.xaml.cs">
+      <DependentUpon>EntryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Common\SelectorPage.xaml.cs">
+      <DependentUpon>SelectorPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -52,11 +78,46 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Views\Registration\RegisterPageView.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="API\" />
-    <Folder Include="Views\Tabbar\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Common\" />
+    <Folder Include="Views\Start\" />
+    <Folder Include="Views\5sections\" />
+    <Folder Include="Views\5sections\1.Places\" />
+    <Folder Include="Views\5sections\2.Search\" />
+    <Folder Include="Views\5sections\5.Profile\" />
+    <Folder Include="Views\5sections\4.News\" />
+    <Folder Include="Views\5sections\3.Reviews\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Start\StartPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Start\YourCityPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Common\MainTabBar.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Start\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Start\PasswordRestorePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Start\LoadingScreenPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Start\RegistrationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Start\EntryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Common\SelectorPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
