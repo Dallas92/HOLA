@@ -10,6 +10,8 @@ namespace HOLA
 		public PlacesPage ()
 		{
 			InitializeComponent ();
+
+			this.Title = "HOLA";
 		}
 	}
 }

@@ -95,6 +95,11 @@
     <BundleResource Include="Resources\Icon-Small-40.png" />
     <BundleResource Include="Resources\Icon-Small-40%402x.png" />
     <BundleResource Include="Resources\Icon-Small-40%403x.png" />
+    <BundleResource Include="Resources\Images\TabBar\ic_menu_home2%402x.png" />
+    <BundleResource Include="Resources\Images\TabBar\ic_menu_news2%402x.png" />
+    <BundleResource Include="Resources\Images\TabBar\ic_menu_otziv2%402x.png" />
+    <BundleResource Include="Resources\Images\TabBar\ic_menu_user2%402x.png" />
+    <BundleResource Include="Resources\Images\TabBar\ic_menu_zavedeniya2%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -107,6 +112,9 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\TabbedPageRenderer.cs" />
+    <Compile Include="Extensions\UIColorExtensions.cs" />
+    <Compile Include="Helpers\UIImageHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="ITunesArtwork" />
@@ -119,5 +127,12 @@
       <Project>{040B9AE2-8889-4B8F-AD61-8C10BC93C2C3}</Project>
       <Name>HOLA</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Renderers\" />
+    <Folder Include="Resources\Images\" />
+    <Folder Include="Resources\Images\TabBar\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 </Project>

@@ -10,6 +10,8 @@ namespace HOLA
 		public ProfilePage ()
 		{
 			InitializeComponent ();
+
+			this.Title = "Моя страница";
 		}
 	}
 }

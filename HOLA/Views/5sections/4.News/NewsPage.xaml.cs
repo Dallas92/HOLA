@@ -10,6 +10,8 @@ namespace HOLA
 		public NewsPage ()
 		{
 			InitializeComponent ();
+
+			this.Title = "Новости";
 		}
 	}
 }

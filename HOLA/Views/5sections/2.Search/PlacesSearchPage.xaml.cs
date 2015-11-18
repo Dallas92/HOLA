@@ -10,6 +10,8 @@ namespace HOLA
 		public PlacesSearchPage ()
 		{
 			InitializeComponent ();
+
+			this.Title = "Заведения";
 		}
 	}
 }

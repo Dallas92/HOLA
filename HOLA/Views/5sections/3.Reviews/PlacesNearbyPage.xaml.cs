@@ -10,6 +10,8 @@ namespace HOLA
 		public PlacesNearbyPage ()
 		{
 			InitializeComponent ();
+
+			this.Title = "Оставить отзыв";
 		}
 	}
 }

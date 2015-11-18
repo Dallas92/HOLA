@@ -38,9 +38,6 @@
     <Compile Include="Views\Start\YourCityPage.xaml.cs">
       <DependentUpon>YourCityPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Common\MainTabBar.xaml.cs">
-      <DependentUpon>MainTabBar.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Start\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -117,6 +114,9 @@
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Methods\API.cs" />
+    <Compile Include="Views\Common\TabBarPage.cs" />
+    <Compile Include="Controls\ExtendedTabbedPage.cs" />
+    <Compile Include="Controls\DataTemplateSelector.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -167,15 +167,13 @@
     <Folder Include="Views\5sections\4.News\" />
     <Folder Include="Views\5sections\3.Reviews\" />
     <Folder Include="Methods\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\Start\StartPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Start\YourCityPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Common\MainTabBar.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Start\LoginPage.xaml">
