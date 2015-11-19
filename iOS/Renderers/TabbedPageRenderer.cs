@@ -22,7 +22,8 @@ namespace HOLA.iOS
 
 			TabBar.TintColor = UIColor.White;
 			TabBar.BarTintColor =  UIColor.Clear.FromHexString("#C80A0A");
-			TabBar.SelectionIndicatorImage = UIImageHelper.CreateImageFromColor((float)TabBar.Frame.Width / 5,(float)TabBar.Frame.Height);
+			TabBar.SelectionIndicatorImage = UIImage.FromBundle("Images/TabBar/ic_menu_shadow").ResizeImage((float)TabBar.Frame.Width / 5,(float)TabBar.Frame.Height);
+			//UIImageHelper.CreateImageFromColor((float)TabBar.Frame.Width / 5,(float)TabBar.Frame.Height);
 
 
 			var gesture1 = new UISwipeGestureRecognizer(sw =>
@@ -55,6 +56,15 @@ namespace HOLA.iOS
 		{
 			base.ViewWillAppear(animated);
 
+			var items = TabBar.Items;
+			for (var i = 0; i < items.Length; i++) {
+				var icon = i == 0 ? "ic_menu_home" : i == 1 ? "ic_menu_zavedeniya" : i == 2 ? "ic_menu_otziv" : i == 3 ? "ic_menu_news" : "ic_menu_user";
+
+				items[i].ImageInsets = new UIEdgeInsets(6, 0, -6, 0);
+				items[i].Image = UIImage.FromBundle("Images/TabBar/" + icon).ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
+				items[i].SelectedImage = UIImage.FromBundle("Images/TabBar/" + icon + "_sel").ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
+			}	
+
 //			var page = (ExtendedTabbedPage)Element;
 //
 //			if (!string.IsNullOrEmpty(page.TabBarSelectedImage))
@@ -81,17 +91,7 @@ namespace HOLA.iOS
 //					items[i].BadgeValue = page.Badges[i];
 //				}
 //			}
-//		}
-
-
-			var items = TabBar.Items;
-			for (var i = 0; i < items.Length; i++) {
-				var icon = i == 0 ? "ic_menu_home2" : i == 1 ? "ic_menu_zavedeniya2" : i == 2 ? "ic_menu_otziv2" : i == 3 ? "ic_menu_news2" : "ic_menu_user2";
-
-				items[i].ImageInsets = new UIEdgeInsets(6, 0, -6, 0);
-				items[i].Image = UIImage.FromBundle("Images/TabBar/" + icon).ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
-				items[i].SelectedImage = UIImage.FromBundle("Images/TabBar/" + icon).ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
-			}			
+//		}		
 		}
 	}
 }

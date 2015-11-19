@@ -11,7 +11,14 @@ namespace HOLA
 		{
 			InitializeComponent ();
 
-			this.Title = "HOLA";
+			//this.Title = "HOLA";
+
+			ToolbarItems.Add(new ToolbarItem("", "Images/Icons/ic_actionbar_city.png", async () =>
+				{
+//					var page = new ContentPage();
+//					var result = await page.DisplayAlert("Title", "Message", "Accept", "Cancel");
+//					Debug.WriteLine("success: {0}", result);
+				}));
 		}
 	}
 }

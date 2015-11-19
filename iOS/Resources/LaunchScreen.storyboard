@@ -35,5 +35,30 @@
     </scenes>
     <resources>
         <image name="Icon-60.png" width="180" height="180"/>
+        <image name="Icon-Small.png" width="87" height="87"/>
+        <image name="Icon-Small-40.png" width="120" height="120"/>
+        <image name="Images/TabBar/ic_menu_home_sel.png" width="45" height="45"/>
+        <image name="Images/TabBar/ic_menu_news_sel.png" width="45" height="45"/>
+        <image name="Images/TabBar/ic_menu_otziv_sel.png" width="45" height="45"/>
+        <image name="Images/TabBar/ic_menu_user_sel.png" width="45" height="45"/>
+        <image name="Images/TabBar/ic_menu_zavedeniya_sel.png" width="45" height="45"/>
+        <image name="Images/TabBar/ic_menu_home.png" width="45" height="45"/>
+        <image name="Images/TabBar/ic_menu_news.png" width="45" height="45"/>
+        <image name="Images/TabBar/ic_menu_otziv.png" width="45" height="45"/>
+        <image name="Images/TabBar/ic_menu_user.png" width="45" height="45"/>
+        <image name="Images/TabBar/ic_menu_zavedeniya.png" width="45" height="45"/>
+        <image name="Images/TabBar/ic_menu_shadow.png" width="248" height="135"/>
+        <image name="Fonts/GothamProBlack.ttf" width="0" height="0"/>
+        <image name="Fonts/GothamProBlackItalic.ttf" width="0" height="0"/>
+        <image name="Fonts/GothamProBold.ttf" width="0" height="0"/>
+        <image name="Fonts/GothamProBoldItalic.ttf" width="0" height="0"/>
+        <image name="Fonts/GothamProItalic.ttf" width="0" height="0"/>
+        <image name="Fonts/GothamProLight.ttf" width="0" height="0"/>
+        <image name="Fonts/GothamProLightItalic.ttf" width="0" height="0"/>
+        <image name="Fonts/GothamProMedium.ttf" width="0" height="0"/>
+        <image name="Fonts/GothamProMediumItalic.ttf" width="0" height="0"/>
+        <image name="Fonts/GothamProRegular.ttf" width="0" height="0"/>
+        <image name="LoadingScreen.png" width="1242" height="2212"/>
+        <image name="logo_start.png" width="511" height="169"/>
     </resources>
 </document>

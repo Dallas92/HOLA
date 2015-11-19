@@ -80,26 +80,52 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Default.png" />
-    <BundleResource Include="Resources\Default%402x.png" />
-    <BundleResource Include="Resources\Default-568h%402x.png" />
-    <BundleResource Include="Resources\Default-Portrait.png" />
-    <BundleResource Include="Resources\Default-Portrait%402x.png" />
-    <BundleResource Include="Resources\Icon-60%402x.png" />
     <BundleResource Include="Resources\Icon-60%403x.png" />
-    <BundleResource Include="Resources\Icon-76.png" />
-    <BundleResource Include="Resources\Icon-76%402x.png" />
-    <BundleResource Include="Resources\Icon-Small.png" />
-    <BundleResource Include="Resources\Icon-Small%402x.png" />
     <BundleResource Include="Resources\Icon-Small%403x.png" />
-    <BundleResource Include="Resources\Icon-Small-40.png" />
-    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
     <BundleResource Include="Resources\Icon-Small-40%403x.png" />
-    <BundleResource Include="Resources\Images\TabBar\ic_menu_home2%402x.png" />
-    <BundleResource Include="Resources\Images\TabBar\ic_menu_news2%402x.png" />
-    <BundleResource Include="Resources\Images\TabBar\ic_menu_otziv2%402x.png" />
-    <BundleResource Include="Resources\Images\TabBar\ic_menu_user2%402x.png" />
-    <BundleResource Include="Resources\Images\TabBar\ic_menu_zavedeniya2%402x.png" />
+    <BundleResource Include="Resources\Images\TabBar\ic_menu_home_sel%402x.png" />
+    <BundleResource Include="Resources\Images\TabBar\ic_menu_home%402x.png" />
+    <BundleResource Include="Resources\Images\TabBar\ic_menu_news_sel%402x.png" />
+    <BundleResource Include="Resources\Images\TabBar\ic_menu_news%402x.png" />
+    <BundleResource Include="Resources\Images\TabBar\ic_menu_otziv_sel%402x.png" />
+    <BundleResource Include="Resources\Images\TabBar\ic_menu_otziv%402x.png" />
+    <BundleResource Include="Resources\Images\TabBar\ic_menu_user_sel%402x.png" />
+    <BundleResource Include="Resources\Images\TabBar\ic_menu_user%402x.png" />
+    <BundleResource Include="Resources\Images\TabBar\ic_menu_zavedeniya_sel%402x.png" />
+    <BundleResource Include="Resources\Images\TabBar\ic_menu_zavedeniya%402x.png" />
+    <BundleResource Include="Resources\Images\TabBar\ic_menu_shadow.png" />
+    <BundleResource Include="Resources\Fonts\GothamProBlack.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\GothamProBlackItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\GothamProBold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\GothamProBoldItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\GothamProItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\GothamProLight.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\GothamProLightItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\GothamProMedium.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\GothamProMediumItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\GothamProRegular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Images\ic_actionbar_logo%402x.png" />
+    <BundleResource Include="Resources\Images\Icons\ic_actionbar_city%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -115,6 +141,8 @@
     <Compile Include="Renderers\TabbedPageRenderer.cs" />
     <Compile Include="Extensions\UIColorExtensions.cs" />
     <Compile Include="Helpers\UIImageHelper.cs" />
+    <Compile Include="Extensions\UIImageExtensions.cs" />
+    <Compile Include="Renderers\PlacesPageRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="ITunesArtwork" />
@@ -134,5 +162,23 @@
     <Folder Include="Resources\Images\TabBar\" />
     <Folder Include="Extensions\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Resources\Fonts\" />
+    <Folder Include="Resources\Images\Icons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-568h%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Portrait.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Portrait%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-40%402x.png" />
   </ItemGroup>
 </Project>
