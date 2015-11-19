@@ -16,7 +16,7 @@ namespace HOLA
 			this.Children.Add (new NavigationPage(new NewsPage ()));
 			this.Children.Add (new NavigationPage(new ProfilePage ()));
 
-			int x = 0;
+			int x = 1;
 		}
 	}
 }
