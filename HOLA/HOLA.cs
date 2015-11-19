@@ -9,7 +9,9 @@ namespace HOLA
 		public App ()
 		{
 			// The root page of your application
-			MainPage = new TabBarPage();
+			//MainPage = new TabBarPage();
+
+			MainPage = new EntryPage();
 		}
 
 		protected override void OnStart ()

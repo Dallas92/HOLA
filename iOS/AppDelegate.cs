@@ -22,6 +22,8 @@ namespace HOLA.iOS
 //			UISearchBar.appearance().tintColor = UIColor.blackColor()
 //			UIBarButtonItem.appearance().setTitleTextAttributes([ NSFontAttributeName: UIFont(name: "SegoeUI-Light", size: 16)!], forState: UIControlState.Normal)
 
+			UIApplication.SharedApplication.SetStatusBarStyle (UIStatusBarStyle.LightContent, false);
+
 			UINavigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes() {
 				TextColor = UIColor.Black,
 				Font = UIFont.FromName ("GothamPro-Bold", 18)

@@ -126,6 +126,10 @@
     </BundleResource>
     <BundleResource Include="Resources\Images\ic_actionbar_logo%402x.png" />
     <BundleResource Include="Resources\Images\Icons\ic_actionbar_city%402x.png" />
+    <BundleResource Include="Resources\Images\img_bg1.png" />
+    <BundleResource Include="Resources\Images\logo_start%402x.png" />
+    <BundleResource Include="Resources\Images\Controls\button_white%402x.png" />
+    <BundleResource Include="Resources\Images\Controls\button_red%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -164,6 +168,7 @@
     <Folder Include="Helpers\" />
     <Folder Include="Resources\Fonts\" />
     <Folder Include="Resources\Images\Icons\" />
+    <Folder Include="Resources\Images\Controls\" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json" />
