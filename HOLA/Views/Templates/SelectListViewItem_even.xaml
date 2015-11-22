@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView BackgroundColor="#F6F6F6" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HOLA.SelectListViewItem_even">
+	<ContentView.Content>
+		<Grid Padding="10, 20, 10, 20" x:Name="Item" >
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="100" />
+			</Grid.ColumnDefinitions>
+			<Label x:Name="TitleLabel" Grid.Row="0" FontSize="16" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" TextColor="#686868" />
+			<Image x:Name="Check" Aspect="AspectFit" HorizontalOptions="End" Grid.Row="0" Grid.Column="1" VerticalOptions="Fill" Source="Images/Controls/ic_checkbox_big_2" />
+		</Grid>
+	</ContentView.Content>
+</ContentView>

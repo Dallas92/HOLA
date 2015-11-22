@@ -10,8 +10,8 @@ namespace HOLA
 		{
 			// The root page of your application
 			//MainPage = new TabBarPage();
-
-			MainPage = new EntryPage();
+			MainPage = new SelectorPage();
+			//MainPage = new EntryPage();
 		}
 
 		protected override void OnStart ()

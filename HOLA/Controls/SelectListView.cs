@@ -2,105 +2,141 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Dynamic;
 
 namespace HOLA
 {
-	public class SelectListView : ListView
+
+	public class SelectValues{
+
+		public string Title { get; set; }
+
+		public string Value { get; set; }
+
+		public bool isSelected { get; set; }
+	}
+
+	public class SelectListView : StackLayout
 	{
-	
-		public class BinderItem{
+		public delegate void SelectEvent(object sender, SelectValues e);
 
-			public BinderItem(string Title, string Value, bool Checked){
+		public event SelectEvent OnItemSelected;
 
-				this.Checked = Checked;
-				this.Title = Title;
-				this.Value = Value;
+		List<SelectValues> values = null;
+
+		private void resetSelected(){
+
+
+
+			foreach (var v in this.Children) {
+
+				if (v is SelectListViewItem_odd) {
+
+					SelectListViewItem_odd slv = (SelectListViewItem_odd)v;
+
+					Grid g = slv.FindByName<Grid> ("Item");
+
+					Image img = (Image)g.Children [1];
+
+					img.Source = ImageSource.FromFile ("Images/Controls/ic_checkbox_big_2");
+
+				} else {
+					SelectListViewItem_even slv = (SelectListViewItem_even)v;
+
+					Grid g = slv.FindByName<Grid> ("Item");
+
+					Image img = (Image)g.Children [1];
+
+					img.Source = ImageSource.FromFile ("Images/Controls/ic_checkbox_big_2");
+
+				}
+
 
 			}
-
-			public bool Checked {
-				get;
-				set;
-			}
-
-			public string Title {
-				get;
-				set;
-			}
-
-			string Value {
-				get;
-				set;
-			}
-
 		}
 
-		public SelectListView ()
+		public SelectListView (List<SelectValues> list)
 		{
-			
-		}
 
-		/*
-		 * 
-		 *  Настраиваем свой собственный итем для отображения. 
-		 * 
-		*/
+			values = list;
 
-		public class CustomViewCell : ViewCell{
+			bool odd = false;
 
-			public BinderItem Item {
-				get;
-				set;
+			foreach (SelectValues v in list) {
+
+				odd = !odd;
+
+				if (odd) {
+
+					SelectListViewItem_odd slv_odd = new SelectListViewItem_odd ();
+
+					slv_odd.Title = v.Title;
+
+					slv_odd.OnItemTaped += (object sender, EventArgs e) => {
+
+						resetSelected();
+
+						Grid g = (Grid)sender;
+
+						Label l = (Label)g.Children[0];
+
+						Image img = (Image)g.Children[1];
+
+						img.Source = ImageSource.FromFile("Images/Controls/ic_checkbox_big_1");
+
+						for (int i = 0; i < values.Count; i++){
+							if (values[i].Title == l.Text){
+								values[i].isSelected = true;
+								OnItemSelected(this, values[i]);
+							}
+							else
+								values[i].isSelected = false;
+						}
+
+						return;
+
+					};
+
+					this.Children.Add (slv_odd);
+
+				} else {
+
+					SelectListViewItem_even slv_even = new SelectListViewItem_even ();
+
+					slv_even.Title = v.Title;
+
+					slv_even.OnItemTaped += (object sender, EventArgs e) => {
+
+						resetSelected();
+
+						Grid g = (Grid)sender;
+
+						Label l = (Label)g.Children[0];
+
+						Image img = (Image)g.Children[1];
+
+						img.Source = ImageSource.FromFile("Images/Controls/ic_checkbox_big_1");
+
+						for (int i = 0; i < values.Count; i++){
+							if (values[i].Title == l.Text){
+								values[i].isSelected = true;
+								OnItemSelected(this, values[i]);
+							}
+							else
+								values[i].isSelected = false;
+						}
+
+						return;
+
+					};
+
+					this.Children.Add (slv_even);
+
+				}
 			}
 
-
-			protected override void OnBindingContextChanged ()
-			{
-				base.OnBindingContextChanged ();
-
-				Item = (BinderItem)this.BindingContext;
-
-				Label Title = new Label();
-
-				Title.HorizontalOptions = LayoutOptions.Start;
-				Title.VerticalOptions = LayoutOptions.Center;
-
-				Title.TextColor = Color.FromHex("#686868");
-
-				Title.SetBinding (Label.TextProperty, new Binding ("Title", BindingMode.TwoWay));
-
-				Image radio = new Image();
-
-				radio.HorizontalOptions = LayoutOptions.End;
-				radio.VerticalOptions = LayoutOptions.Center;
-
-				radio.Source = "Images/Controls/ic_checkbox_big_2";
-
-				Grid grid = new Grid();
-
-				ColumnDefinition cd1 = new ColumnDefinition();
-
-				cd1.Width = new GridLength(.1, GridUnitType.Star);
-
-				ColumnDefinition cd2 = new ColumnDefinition();
-
-				cd2.Width = new GridLength(100, GridUnitType.Absolute);
-
-				grid.ColumnDefinitions.Add (cd1);
-				grid.ColumnDefinitions.Add (cd2);
-
-				grid.Children.Add(Title, 0,0);
-				grid.Children.Add (radio, 0, 1);
-
-				grid.Padding = new Thickness(10,10,10,10);
-
-				View = grid;
-
-			}
-
+		
 		}
-
-
 
 	}
 

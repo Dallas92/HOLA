@@ -8,30 +8,38 @@ namespace HOLA
 {
 	public partial class SelectorPage : ContentPage
 	{
+
+		public class ItemListView
+		{
+
+			public string Title {get; set;}
+			public string Value { get; set; }
+			public bool isChecked { get; set;}
+
+		}
+
+		private List<ItemListView> Values = new List<ItemListView> ();
+
 		public SelectorPage ()
 		{
 			InitializeComponent ();
 
-			SelectListView SLV = new SelectListView ();
+			List<SelectValues> sv = new List<SelectValues> ();
 
-			List<SelectListView.BinderItem> binding = new List<SelectListView.BinderItem> ();
+			sv.Add (new SelectValues () { isSelected = false, Title = "Алматы", Value = "Алматы" });
+			sv.Add (new SelectValues () { isSelected = false, Title = "Астана", Value = "Астана" });
+			sv.Add (new SelectValues () { isSelected = false, Title = "Актобе", Value = "Актобе" });
+			sv.Add (new SelectValues () { isSelected = false, Title = "Мадагаскар", Value = "Мадагаскар" });
 
-			binding.Add (new SelectListView.BinderItem ("Test1", "val1", false));
-			binding.Add (new SelectListView.BinderItem ("Test2", "val2", false));
-			binding.Add (new SelectListView.BinderItem ("Test3", "val3", false));
-			binding.Add (new SelectListView.BinderItem ("Test4", "val4", true));
+			SelectListView slv = new SelectListView (sv);
 
-			SLV.ItemTapped += (object sender, ItemTappedEventArgs e) => {
-				var item = e.Item as SelectListView.CustomViewCell;
+			slv.OnItemSelected += (object sender, SelectValues e) => {
 
 				return;
 
 			};
 
-			SLV.ItemsSource = binding;
-
-			root.Children.Add (SLV);
-
+			root.Children.Add (slv);
 
 		}
 	}
