@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HOLA.SelectorPage">
 	<ContentPage.Content>
+			<StackLayout x:Name="root" BackgroundColor="White">
+				<ContentView HorizontalOptions="Fill" BackgroundColor="#C80A0A" Padding="5, 5, 5, 5">
+					<AbsoluteLayout>
+						<Label FontSize="20" FontFamily="Gotham Pro Bold" FontAttributes="Bold" AbsoluteLayout.LayoutBounds="0.5,0,-1,-1"
+	           				AbsoluteLayout.LayoutFlags="PositionProportional" VerticalOptions="Start" Text="Выберете город" TextColor="Black" />
+						<Label FontSize="18" x:Name="btnFinish" BackgroundColor="#C80A0A" FontFamily="Gotham Pro Light" AbsoluteLayout.LayoutBounds="1,0,-1,-1"
+	           				AbsoluteLayout.LayoutFlags="PositionProportional" VerticalOptions="Start" Text="Готово" TextColor="Black" />
+					</AbsoluteLayout>
+				</ContentView>
+			</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
